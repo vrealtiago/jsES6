@@ -87,7 +87,7 @@ class NegociacaoService{
 				negociacoes.filter(negociacao =>
 					!listaAtual.some(negociacaoExistente =>
 						negociacao.isEquals(negociacaoExistente)))
-			).catch(error => {
+			).catch(erro => {
 				console.log(erro);
 				throw new Error('nao foi possivel buscar negociacoes para importar')
 			});
